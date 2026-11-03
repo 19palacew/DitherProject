@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cpysuopv36ttx"]
+
+[ext_resource type="Material" uid="uid://c7b21mj1fbj38" path="res://DitherShader.tres" id="1_xtwlf"]
+[ext_resource type="Texture2D" uid="uid://baq45hbdlyvnw" path="res://Imports/20261021_080214.jpg" id="2_50cbs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c4sjg"]
+
+[node name="Node3D" type="Node3D" unique_id=54319071]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=282629877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2464849, -0.8603395, -2.5537956)
+layers = 17
+mesh = SubResource("BoxMesh_c4sjg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=195339852]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1547248250]
+material = ExtResource("1_xtwlf")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=372657157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.95696497)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2039967117]
+transform = Transform3D(0.6226031, -0.32395348, 0.71233386, 0, 0.91028684, 0.4139781, -0.78253776, -0.25774404, 0.5667475, 2.9090526, 0, -0.7262273)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1795035154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.708996)
+texture = ExtResource("2_50cbs")
